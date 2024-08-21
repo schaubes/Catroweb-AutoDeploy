@@ -416,8 +416,8 @@ class Deployer:
             label, "run composer install", git_folder)
         logger.info(f"Run npm ci for {label}")
         self._run_subprocess("sudo -u www-data npm ci", label, "run npm ci", git_folder)
-        logger.info(f"Run catro:reset for {label}")
-        self._run_subprocess("sudo -u www-data php bin/console catro:reset --hard", label, "run catro:reset",
+        logger.info(f"Run catrobat:reset for {label}")
+        self._run_subprocess("sudo -u www-data php bin/console catrobat:reset --hard", label, "run catrobat:reset",
                              git_folder)
         logger.info(f"Run webpack encore for {label}")
         self._run_subprocess("sudo -u www-data npm run encore dev", label, "run webpack encore", git_folder)
